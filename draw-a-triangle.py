@@ -227,7 +227,7 @@ def main():
             defType = input("How would you like to define your triangle? AAS, ASA, SAS, SSS, or HL?")
 
             while defType!="AAS" and defType!="aas" and defType!="ASA" and defType!="asa" and defType!="SAS" and defType!="sas" and defType!="SSS" and defType!="sss" and defType!="HL" and defType!="hl":
-                print("I'm sorry, please only choose AAS, ASA, SAS, or SSS.")
+                print("I'm sorry, please only choose AAS, ASA, SAS, SSS, or HL.")
                 defType = input("How would you like to define your triangle?")
 
             if defType=="AAS" or defType=="aas":
