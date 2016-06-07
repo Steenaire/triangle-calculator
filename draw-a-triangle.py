@@ -154,10 +154,10 @@ def HL():
     #Hypotenuse-Leg is only for right-triangles
     angleC = 90
 
-    sidec = float(input("Enter the length of the hypotenuse:"))
+    sidec = int(input("Enter the length of the hypotenuse:"))
     while sidec == 0:
         sidec = SideZero()
-    sideb = float(input("Enter the length of a leg:"))
+    sideb = int(input("Enter the length of a leg:"))
     while sideb == 0:
         sideb = SideZero()
 
