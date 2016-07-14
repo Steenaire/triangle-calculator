@@ -73,7 +73,7 @@ def AAS():
     drawing(sidea, sideb, sidec, angleA, angleB, angleC)
 
 #Defining a triangle with two angles and a side in-between them:
-def ASA():
+def ASA(): #This method is having issues with some triangles
     angleA = int(input("Enter your first angle:"))
     while angleA>=178:
         angleA = AngleLarge()
@@ -141,9 +141,9 @@ def SSS():
     while sidea+sideb<=sidec or sideb+sidec<=sidea or sidea+sidec<=sideb:
         sidea, sideb, sidec = TriangleInequalityTheorem()
 
-    angleA = math.degrees(math.acos(((sideb*sideb)+(sidec*sidec)-(sidea*sidea))/(2*sideb*sidec)))
+    angleA = int(math.degrees(math.acos(float(((sideb*sideb)+(sidec*sidec)-(sidea*sidea)))/float((2*sideb*sidec)))))
 
-    angleB = math.degrees(math.acos(((sidec*sidec)+(sidea*sidea)-(sideb*sideb))/(2*sidec*sidea)))
+    angleB = int(math.degrees(math.acos(float(((sidec*sidec)+(sidea*sidea)-(sideb*sideb)))/float((2*sidec*sidea)))))
 
     angleC = ThirdAngleCalc(angleA,angleB)
     
@@ -224,18 +224,16 @@ def main():
     while query=="Y" or query=="y" or query=="Yes" or query=="yes":
         query = raw_input("Would you like to draw a triangle? (Y/N)")
         if query=="Y" or query=="y" or query=="Yes" or query=="yes":
-            defType = raw_input("How would you like to define your triangle? AAS, ASA, SAS, SSS, or HL?")
+            defType = raw_input("How would you like to define your triangle? AAS, ASA, SSS, or HL?")
 
-            while defType!="AAS" and defType!="aas" and defType!="ASA" and defType!="asa" and defType!="SAS" and defType!="sas" and defType!="SSS" and defType!="sss" and defType!="HL" and defType!="hl":
-                print("I'm sorry, please only choose AAS, ASA, SAS, or SSS.")
+            while defType!="AAS" and defType!="aas" and defType!="ASA" and defType!="asa" and defType!="SSS" and defType!="sss" and defType!="HL" and defType!="hl":
+                print("I'm sorry, please only choose AAS, ASA, or SSS.")
                 defType = raw_input("How would you like to define your triangle?")
 
             if defType=="AAS" or defType=="aas":
                 AAS()
             elif defType=="ASA" or defType=="asa":
                 ASA()
-            elif defType=="SAS" or defType=="sas":
-                SAS()
             elif defType=="SSS" or defType=="sss":
                 SSS()
             elif defType=="HL" or defType=="hl":
