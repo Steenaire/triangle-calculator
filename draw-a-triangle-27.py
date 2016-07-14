@@ -97,34 +97,6 @@ def ASA(): #This method is having issues with some triangles
 
     drawing(sidea, sideb, sidec, angleA, angleB, angleC)
 
-#Defining a triangle with two sides and an angle in-between them:
-def SAS():
-    angleA = int(input("Enter your first angle:"))
-    while angleA>=178:
-        angleA = AngleLarge()
-    while angleA == 0:
-        angleA = AngleZero()
-        
-    sideb = int(input("Enter your first side:"))
-    while sideb == 0:
-        sideb = SideZero()
-    sidec = int(input("Enter your second side:"))
-    while sidec == 0:
-        sidec = SideZero()
-
-    if sideb>sidec:
-        hold = sidec
-        sidec = sideb
-        sideb = hold
-
-    sidea = math.sqrt((sideb*sideb)+(sidec*sidec)-((2*sideb*sidec)*(math.cos(math.radians(angleA)))))
-
-    angleB = math.degrees(math.asin(((math.sin(math.radians(angleA))*sideb)/sidea)))
-
-    angleC = ThirdAngleCalc(angleA,angleB)
-
-    drawing(sidea, sideb, sidec, angleA, angleB, angleC)
-
 #Defining an angle with three sides only
 def SSS():
     
