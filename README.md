@@ -7,10 +7,10 @@ To make a triangle, simply use terminal (or Windows PowerShell) navigate to wher
 ```
 python draw-a-triangle-34.py
 ```
-to run the Python 3.4 version, or 
+To run the Python 3.4 version, or 
 ```
 python draw-a-triangle-27.py
 ```
-to run the Python 2.7 version,and press enter. Follow the instructions to select AAS, ASA, SAS, SSS, or HL to define your triangle.
+To run the Python 2.7 version,and press enter. Follow the instructions to select AAS, ASA, SAS, SSS, or HL to define your triangle.
 
 After you exit the turtle window, the script will ask you if you want to make a triangle again. You can keep making triangles until you reply something other than y/yes.
